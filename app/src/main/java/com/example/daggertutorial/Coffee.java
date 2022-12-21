@@ -3,6 +3,7 @@ package com.example.daggertutorial;
 import android.util.Log;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 public class Coffee {
 
@@ -16,7 +17,7 @@ public class Coffee {
     int milk;
 
     @Inject
-    public Coffee(River river, int sugar, int milk) {
+    public Coffee(River river, @Named("sugar") int sugar, @Named("milk") int milk) {
         this.river = river;
         this.sugar = sugar;
         this.milk = milk;
@@ -29,6 +30,6 @@ public class Coffee {
     }
 
     public String getCoffeeCup(){
-        return "CoffeeCup is content of " + river.getWater() + " + " + farm.getCoffeeBeans()+", need Suger: "+ sugar +" and need milk: "+ milk;
+        return "CoffeeCup is content of " + river.getWater() + " + " + farm.getCoffeeBeans()+", need Sugar: "+ sugar +" and need milk: "+ milk;
     }
 }

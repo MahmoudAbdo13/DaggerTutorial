@@ -1,5 +1,7 @@
 package com.example.daggertutorial;
 
+import javax.inject.Named;
+
 import dagger.BindsInstance;
 import dagger.Component;
 
@@ -13,10 +15,10 @@ public interface CoffeeComponent {
     interface Builder {
 
         @BindsInstance
-        Builder sugar(int sugar);
+        Builder sugar(@Named("sugar") int sugar);
 
         @BindsInstance
-        Builder milk(int milk);
+        Builder milk(@Named("milk") int milk);
 
         CoffeeComponent build();
     }
