@@ -20,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        CoffeeComponent component = DaggerCoffeeComponent.create();
+        CoffeeComponent component = DaggerCoffeeComponent.builder().
+                coffeeModule(new CoffeeModule(3))
+                .build();
         component.inject(this);
 
         Log.e(TAG, "onCreate: "+coffee.getCoffeeCup());

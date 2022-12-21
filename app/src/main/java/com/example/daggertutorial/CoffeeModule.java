@@ -11,6 +11,11 @@ import dagger.Provides;
 public class CoffeeModule {
 
     private static final String TAG = "CoffeeModule";
+    int sugar;
+
+    public CoffeeModule(int sugar) {
+        this.sugar = sugar;
+    }
 
     @Provides
     River provideRiver(){
@@ -21,6 +26,6 @@ public class CoffeeModule {
     @Provides
     int provideSugar(){
         Log.e(TAG, "provideSugar: ");
-        return 2;
+        return sugar;
     }
 }
