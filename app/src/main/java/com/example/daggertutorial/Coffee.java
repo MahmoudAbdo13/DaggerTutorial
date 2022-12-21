@@ -6,7 +6,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
-@Singleton
+@ActivityScope
 public class Coffee {
 
     private static final String TAG = "Coffee";

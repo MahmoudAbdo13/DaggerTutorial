@@ -8,7 +8,7 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class CoffeeModule {
+public class RiverModule {
 
     private static final String TAG = "CoffeeModule";
 

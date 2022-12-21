@@ -4,14 +4,14 @@ import android.app.Application;
 
 public class MainApplication extends Application {
 
-    private CoffeeComponent coffeeComponent;
+    private AppComponent appComponent;
     @Override
     public void onCreate() {
         super.onCreate();
-        coffeeComponent = DaggerCoffeeComponent.builder().sugar(4).milk(5).build();
+        appComponent = DaggerAppComponent.create();
     }
 
-    public CoffeeComponent getCoffeeComponent() {
-        return coffeeComponent;
+    public AppComponent getAppComponent() {
+        return appComponent;
     }
 }

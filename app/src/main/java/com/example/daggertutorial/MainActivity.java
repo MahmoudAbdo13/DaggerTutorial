@@ -20,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        CoffeeComponent component = ((MainApplication)getApplication()).getCoffeeComponent();
-        component.inject(this);
+        AppComponent component = ((MainApplication)getApplication()).getAppComponent();
+        CoffeeComponent coffeeComponent = DaggerCoffeeComponent.builder().milk(4).sugar(3).appComponent(component).build();
+        coffeeComponent.inject(this);
 
-        Log.e(TAG, "onCreate: "+coffee.getCoffeeCup() + "\n " + coffee);
-        Log.e(TAG, "onCreate: "+coffee2.getCoffeeCup() + "\n " + coffee2);
+        Log.e(TAG, "onCreate: "+coffee.getCoffeeCup() + "\n " + coffee+ "\n " + coffee2);
         TextView textView = findViewById(R.id.coffee);
         textView.setText(coffee.getCoffeeCup());
     }
