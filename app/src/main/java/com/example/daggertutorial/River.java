@@ -9,7 +9,7 @@ public class River {
 
     private static final String TAG = "River";
 
-    @Inject
+    // for view only
     public River() {
         Log.e(TAG, "River: ");
     }

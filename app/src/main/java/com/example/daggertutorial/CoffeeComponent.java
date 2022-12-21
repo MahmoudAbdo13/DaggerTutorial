@@ -2,7 +2,7 @@ package com.example.daggertutorial;
 
 import dagger.Component;
 
-@Component
+@Component(modules = CoffeeModule.class)
 public interface CoffeeComponent {
     Coffee getCoffee();
 
