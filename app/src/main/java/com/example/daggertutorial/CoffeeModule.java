@@ -17,4 +17,10 @@ public class CoffeeModule {
         Log.e(TAG, "provideRiver: ");
         return new River();
     }
+
+    @Provides
+    int provideSugar(){
+        Log.e(TAG, "provideSugar: ");
+        return 2;
+    }
 }
