@@ -13,11 +13,13 @@ public class Coffee {
 
     River river;
     int sugar;
+    int milk;
 
     @Inject
-    public Coffee(River river, int sugar) {
+    public Coffee(River river, int sugar, int milk) {
         this.river = river;
         this.sugar = sugar;
+        this.milk = milk;
         Log.e(TAG, "Coffee: ");
     }
 
@@ -27,6 +29,6 @@ public class Coffee {
     }
 
     public String getCoffeeCup(){
-        return "CoffeeCup is content of " + river.getWater() + " + " + farm.getCoffeeBeans()+" and need Suger: "+ sugar;
+        return "CoffeeCup is content of " + river.getWater() + " + " + farm.getCoffeeBeans()+", need Suger: "+ sugar +" and need milk: "+ milk;
     }
 }

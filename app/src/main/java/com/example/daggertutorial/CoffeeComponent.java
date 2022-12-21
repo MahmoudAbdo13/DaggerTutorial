@@ -15,6 +15,9 @@ public interface CoffeeComponent {
         @BindsInstance
         Builder sugar(int sugar);
 
+        @BindsInstance
+        Builder milk(int milk);
+
         CoffeeComponent build();
     }
 }
