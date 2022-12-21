@@ -12,6 +12,7 @@ public class CoffeeModule {
 
     private static final String TAG = "CoffeeModule";
 
+    @Singleton
     @Provides
     River provideRiver(){
         Log.e(TAG, "provideRiver: ");
