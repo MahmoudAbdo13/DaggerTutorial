@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         CoffeeComponent component = ((MainApplication)getApplication()).getCoffeeComponent();
         component.inject(this);
 
-        Log.e(TAG, "onCreate: "+coffee.getCoffeeCup());
-        Log.e(TAG, "onCreate: "+coffee2.getCoffeeCup());
+        Log.e(TAG, "onCreate: "+coffee.getCoffeeCup() + "\n " + coffee);
+        Log.e(TAG, "onCreate: "+coffee2.getCoffeeCup() + "\n " + coffee2);
         TextView textView = findViewById(R.id.coffee);
         textView.setText(coffee.getCoffeeCup());
     }

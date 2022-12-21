@@ -4,7 +4,9 @@ import android.util.Log;
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.inject.Singleton;
 
+@Singleton
 public class Coffee {
 
     private static final String TAG = "Coffee";
@@ -30,7 +32,8 @@ public class Coffee {
     }
 
     public String getCoffeeCup(){
-        return "CoffeeCup is content of " + river.getWater() + " + " + farm.getCoffeeBeans()+
-                ", need Sugar: "+ sugar +" and need milk: "+ milk+ " farm number: "+ farm+ " river number: "+ river;
+        return "\n CoffeeCup is content of " + river.getWater() + " + " + farm.getCoffeeBeans() +
+                "\n, need Sugar: "+ sugar + " and need milk: " + milk +
+                "\n farm number: "+ farm + "\n river number: " + river;
     }
 }
