@@ -3,7 +3,9 @@ package com.example.daggertutorial;
 import android.util.Log;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
+@Singleton
 public class Farm {
 
     private static final String TAG = "Farm";

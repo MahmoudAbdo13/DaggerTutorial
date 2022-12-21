@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     @Inject
-    Coffee coffee;
+    Coffee coffee, coffee2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         component.inject(this);
 
         Log.e(TAG, "onCreate: "+coffee.getCoffeeCup());
+        Log.e(TAG, "onCreate: "+coffee2.getCoffeeCup());
         TextView textView = findViewById(R.id.coffee);
         textView.setText(coffee.getCoffeeCup());
     }

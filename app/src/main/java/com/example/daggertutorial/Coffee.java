@@ -30,6 +30,7 @@ public class Coffee {
     }
 
     public String getCoffeeCup(){
-        return "CoffeeCup is content of " + river.getWater() + " + " + farm.getCoffeeBeans()+", need Sugar: "+ sugar +" and need milk: "+ milk;
+        return "CoffeeCup is content of " + river.getWater() + " + " + farm.getCoffeeBeans()+
+                ", need Sugar: "+ sugar +" and need milk: "+ milk+ "farm number: "+ farm;
     }
 }
