@@ -15,10 +15,10 @@ public interface CoffeeComponent {
     interface Builder {
 
         @BindsInstance
-        Builder sugar(@Named("sugar") int sugar);
+        Builder sugar(@Sugar int sugar);
 
         @BindsInstance
-        Builder milk(@Named("milk") int milk);
+        Builder milk(@Milk int milk);
 
         CoffeeComponent build();
     }

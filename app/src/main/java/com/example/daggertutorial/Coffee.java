@@ -17,7 +17,7 @@ public class Coffee {
     int milk;
 
     @Inject
-    public Coffee(River river, @Named("sugar") int sugar, @Named("milk") int milk) {
+    public Coffee(River river, @Sugar int sugar, @Milk int milk) {
         this.river = river;
         this.sugar = sugar;
         this.milk = milk;
