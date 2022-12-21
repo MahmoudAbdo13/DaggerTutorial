@@ -1,7 +1,10 @@
 package com.example.daggertutorial;
 
-public class River {
 
+import javax.inject.Inject;
+
+public class River {
+    @Inject
     public River() {
     }
 }
