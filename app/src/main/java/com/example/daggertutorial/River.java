@@ -7,4 +7,8 @@ public class River {
     @Inject
     public River() {
     }
+
+    public String getWater(){
+        return "Water";
+    }
 }
